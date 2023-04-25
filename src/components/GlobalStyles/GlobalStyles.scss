@@ -9,6 +9,7 @@
     //Default Layout
     --default-layout-header-height: 60px;
     --default-layout-width: 1150px;
+    --default-layout-horizontal-spacer: 24px;
 }
 
 * {
@@ -39,4 +40,33 @@ input,
 a[href] {
     color: var(--text-coler);
     text-decoration: none;
+}
+
+//Custom tippy toolbox
+body {
+    .tippy-box {
+        border-radius: 8px;
+        font-weight: 600;
+        font-size: 1.6rem;
+        line-height: 2.2rem;
+        background-color: rgba(84, 84, 84, 0.92);
+    }
+    .tippy-arrow {
+        background-color: rgba(84, 84, 84, 0.92);
+    }
+    .tippy-content {
+        padding: 8px 9px;
+    }
+    .tippy-box[data-placment^='bottom'] > .tippy-arrow::before {
+        top: -8px;
+    }
+}
+
+.user-avatar {
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-left: 12px;
+    cursor: pointer;
 }
